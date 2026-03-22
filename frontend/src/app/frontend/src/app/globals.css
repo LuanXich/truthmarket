@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #22c55e;
+  --brand-dim: #16a34a;
+  --dark-bg: #080c0e;
+  --card-bg: #0d1418;
+  --border: #1c2a32;
+}
+
+body {
+  background-color: var(--dark-bg);
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono { font-family: 'Space Mono', monospace; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34,197,94,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34,197,94,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(34,197,94,0.25), 0 0 60px rgba(34,197,94,0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(34,197,94,0.5);
+}
+
+.market-card {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.market-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,197,94,0.4);
+  box-shadow: 0 8px 32px rgba(34,197,94,0.12);
+}
+
+.progress-yes {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+.progress-no {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--dark-bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.5s ease forwards; }
